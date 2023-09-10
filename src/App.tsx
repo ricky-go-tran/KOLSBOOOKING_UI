@@ -1,12 +1,17 @@
 import React from 'react';
+import { Routes, BrowserRouter, Route, Navigate } from 'react-router-dom'
+import Login from './pages/general/login/Login'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
- return (
-    <h1 className="text-3xl font-bold underline text-red-600">
-      Simple React Typescript Tailwind Sample
-    </h1>
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
